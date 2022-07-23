@@ -1,16 +1,24 @@
 import React from 'react';
+import Button from '../UI/Button';
+//import Button from '../UI/Button';
 
 import Card from '../UI/Card';
 import classes from './UsersList.module.css';
 
-const UsersList = (props) => {
+const UsersList = ({users,setUsersList}) => {
+  const clickme=(id)=>{
+    console.log(users)
+    let val=users.filter(keys=>keys.id !== id)
+    setUsersList(val)
+  }
   return (
     <Card className={classes.users}>
       <ul>
-        {props.users.map((user) => (
-          <li key={user.id}>
+        {users.map((user) => (
+          <li key={user.id} >
             {user.name} 
-          </li>
+            <Button onClick={()=>clickme(user.id)}>Delete</Button>
+          </li>  
         ))}
       </ul>
     </Card>
