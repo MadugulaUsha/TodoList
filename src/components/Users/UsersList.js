@@ -17,7 +17,7 @@ const UsersList = ({users,setUsersList}) => {
         {users.map((user) => (
           <li key={user.id} >
             {user.name} 
-            <Button onClick={()=>clickme(user.id)}>Delete</Button>
+            <button className={classes.btn} onClick={()=>clickme(user.id)}>Delete</button>
           </li>  
         ))}
       </ul>
