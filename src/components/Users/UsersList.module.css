@@ -18,7 +18,7 @@
   
   font: inherit;
   border: 1px solid #4f005f;
- margin-left: 30rem;
+   margin-left: 80%;
   color: white;
   /* padding: 0.25rem 1rem; */
   background-image: linear-gradient(#c33fdd,#4e0d5b);
@@ -33,4 +33,28 @@
 
 .btn:focus {
   outline: none;
+}
+@media screen and (max-width:588px) {
+  .btn{
+    font: inherit;
+    border: 1px solid #4f005f;
+    color: white;
+    margin-left: 70%;
+    /* padding: 0.25rem 1rem; */
+    background-image: linear-gradient(#c33fdd,#4e0d5b);
+    cursor: pointer;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width:412px) {
+  .btn{
+    font: inherit;
+    border: 1px solid #4f005f;
+    color: white;
+    margin-left: 65%;
+    /* padding: 0.25rem 1rem; */
+    background-image: linear-gradient(#c33fdd,#4e0d5b);
+    cursor: pointer;
+    border-radius: 10px;
+  }
 }
